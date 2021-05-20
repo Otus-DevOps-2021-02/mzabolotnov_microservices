@@ -1,4 +1,6 @@
 # mzabolotnov_microservices
 mzabolotnov microservices repository
 
-Поднят instance в yс. На нем установлен docker. Развернут контейнер с приложением из папки docker-monolith, на образе 16.04. Приложение стартует и работает.
+Развернуто приложение в  четырех контейнерах, собраных  на основании 3-х Dockerfile,  расположенных в папках /src/comment, /src/post, /src/ui, и стандартного образа Mongo:latest
+Контейнеры работают в  bridge-сети. В Dockerfiles внесены изменения в сравнении с исходными. Контейнеры собраны на основе образов Ubuntu 16.04 и 18.04
+
