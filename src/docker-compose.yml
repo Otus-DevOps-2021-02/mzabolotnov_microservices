@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  post_db:
+    image: mongo:3.2
+    volumes:
+      - post_db:/data/db
+    networks:
+      - back_net
+  ui:
+    build: ./ui
+    image: ${USERNAME}/ui:2.0
+    ports:
+      - ${PORT_UI}
+    networks:
+      - front_net
+  post:
+    build: ./post-py
+    image: ${USERNAME}/post:2.0
+    networks:
+        - back_net
+        - front_net
+  comment:
+    build: ./comment
+    image: ${USERNAME}/comment:2.0
+    networks:
+      - back_net
+      - front_net
+
+volumes:
+  post_db:
+
+networks:
+  front_net:
+    driver: bridge
+    ipam:
+       config:
+        - subnet: 10.0.1.0/24
+  back_net:
+      driver: bridge
+      ipam:
+        config:
+         - subnet: 10.0.2.0/24
+
+      # docker network create back_net --subnet=10.0.2.0/24
+    # docker network create front_net --subnet=10.0.1.0/24
+    # docker run --rm -d --network=back_net --network-alias=post_db --network-alias=comment_db --name mongo_db -v reddit_db:/data/db mongo:latest
+    # docker run --rm -d --network=back_net --network-alias=post --name post mzabolotnov/post:2.0
+    # docker run --rm -d --network=back_net --network-alias=comment --name comment mzabolotnov/comment:2.0
+    # docker run --rm -d --network=front_net --name ui -p 9292:9292 mzabolotnov/ui:2.0
+    # docker network connect front_net post
+    # docker network connect front_net comment
