@@ -12,19 +12,20 @@ services:
     ports:
       - ${PORT_UI}
     networks:
-      - front_net
+      # - front_net
+      - back_net
   post:
     # build: ./post-py
     image: ${USERNAME}/post
     networks:
         - back_net
-        - front_net
+        # - front_net
   comment:
     # build: ./comment
     image: ${USERNAME}/comment
     networks:
       - back_net
-      - front_net
+      # - front_net
           
 volumes:
  post_db:

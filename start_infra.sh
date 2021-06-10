@@ -8,7 +8,7 @@ yc compute instance create \
 
  docker-machine create \
  --driver generic \
- --generic-ip-address=<ПУБЛИЧНЫЙ_IP_СОЗДАНОГО_ВЫШЕ_ИНСТАНСА> \
+ --generic-ip-address=178.154.203.66 \
  --generic-ssh-user yc-user \
  --generic-ssh-key ~/.ssh/appuser \
  docker-host
