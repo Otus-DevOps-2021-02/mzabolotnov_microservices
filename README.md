@@ -21,7 +21,7 @@ mongo-6b9fcfd49f-bb2zq     1/1     Running   1          23h
 post-5bf948d94-m5mkm       1/1     Running   1          23h
 ui-77f8764fc5-2zbkx        1/1     Running   1          23h
 
- HW logging-1
+HW logging-1
 =========================================
 
 Основное задание
