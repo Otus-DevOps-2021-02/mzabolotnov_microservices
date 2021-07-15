@@ -4,3 +4,5 @@ build_info.txt
 *.pyc
 .env
 .env.save
+tls.crt
+tls.key
