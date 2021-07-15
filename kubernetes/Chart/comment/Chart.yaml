@@ -1,0 +1,7 @@
+name: comment
+version: 1.0.0
+description: OTUS reddit app lication COMMENT
+maintainers:
+ - name: mzabolotnov
+   email: mike@gmail.com
+appVersion: 1.0
