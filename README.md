@@ -8,6 +8,7 @@ HW21 kubernetes-3
 2. Настройка Ingress на прием только HTTPS трафика
 3. Настроил Network Policy
 4. Создан ресурс дискового хранилища в YC, добавили подключил к кластеру в виде PersistentVolume и подключили к деплою mongo
+5. ui-secret описан в виде манифеста ui-secret.yml
 
 ![image](https://user-images.githubusercontent.com/80415069/125756032-f8b2bba4-6900-413e-a078-9a24fc0f3603.png)
 ![image](https://user-images.githubusercontent.com/80415069/125756276-f1c2445e-ceea-459b-8cac-8f49e18783cd.png)
