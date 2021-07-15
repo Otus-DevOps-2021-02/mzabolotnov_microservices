@@ -1,7 +1,40 @@
 # mzabolotnov_microservices
 mzabolotnov microservices repository
 
- HW kubernetes-1
+HW21 kubernetes-3
+=========================================
+
+1. Установлен Ingress Controller
+2. Настройка Ingress на прием только HTTPS трафика
+3. Настроил Network Policy
+4. Создан ресурс дискового хранилища в YC, добавили подключил к кластеру в виде PersistentVolume и подключили к деплою mongo
+
+![image](https://user-images.githubusercontent.com/80415069/125756032-f8b2bba4-6900-413e-a078-9a24fc0f3603.png)
+![image](https://user-images.githubusercontent.com/80415069/125756276-f1c2445e-ceea-459b-8cac-8f49e18783cd.png)
+
+
+HW kubernetes-2
+=========================================
+1. Установил локально minikube
+2. Обновлены манифесты для Reddit, приложение запущено в локальном minikube
+3.Создал новый кластер настройка в yandex cloud
+
+kubectl get nodes
+NAME                        STATUS   ROLES    AGE   VERSION
+cl1dmdgngf6jmqu9ncpr-upij   Ready    <none>   3d    v1.20.6
+cl1dmdgngf6jmqu9ncpr-ywys   Ready    <none>   3d    v1.20.6
+
+4. Приложение запущено в кластере yandex cloud
+kubectl get pods -n dev
+NAME                                    READY   STATUS    RESTARTS   AGE
+comment-6bb7c5744c-2t5nd                1/1     Running   0          3d
+mongo-gce-pd-storage-7dbb8b6f7b-2dd9h   0/1     Pending   0          11m
+post-5bf948d94-r5td5                    1/1     Running   0          3d
+ui-77f8764fc5-dj4nq                     1/1     Running   0          3d
+![image](https://user-images.githubusercontent.com/80415069/125755178-8d933dae-fe3b-48e1-9023-42d476573419.png)
+![image](https://user-images.githubusercontent.com/80415069/125755329-12e15893-24fb-4d57-81ed-e7de2f9fcc98.png)
+
+HW kubernetes-1
 =========================================
 1. Созданы виртуалки и кластер 
 ```
