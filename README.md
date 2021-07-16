@@ -4,7 +4,7 @@ mzabolotnov microservices repository
 HW kubernetes-4
 =========================================
 
-1. Установлен helm 3
+1. Установлен helm
 2. Созданы чарты для reddit app
 3. Установлен gitlab-omnibus из helm chart
 4. Настроен CI для компонентов reddit app и для деплоя приложения
