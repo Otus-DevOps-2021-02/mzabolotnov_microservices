@@ -21,3 +21,4 @@ details the work done to break this monolithic container into component parts.
 This chart is an easy way to get started with GitLab on Kubernetes. It includes everything needed to run GitLab, including: a Runner, Container Registry, automatic SSL, and an Ingress.
 
 For more information, please review [our documentation](http://docs.gitlab.com/ee/install/kubernetes/gitlab_omnibus.html).
+

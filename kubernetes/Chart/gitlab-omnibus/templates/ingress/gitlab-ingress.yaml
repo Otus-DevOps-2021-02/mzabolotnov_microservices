@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ template "fullname" . }}
@@ -24,27 +24,35 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: {{ template "fullname" . }}
-          servicePort: 8005
+          service:
+           name: {{ template "fullname" . }}
+           port:
+            number: 8005
   - host: registry.{{ .Values.baseDomain }}
     http:
       paths:
       - path: /
         backend:
-          serviceName: {{ template "fullname" . }}
-          servicePort: 8105
+          service:
+           name: {{ template "fullname" . }}
+           port:
+            number: 8105
   - host: mattermost.{{ .Values.baseDomain }}
     http:
       paths:
       - path: /
         backend:
-          serviceName: {{ template "fullname" . }}
-          servicePort: 8065
+          service:
+           name: {{ template "fullname" . }}
+           port:
+            number: 8065
   - host: prometheus.{{ .Values.baseDomain }}
     http:
       paths:
       - path: /
         backend:
-          serviceName: {{ template "fullname" . }}
-          servicePort: 9090
+          service:
+           name: {{ template "fullname" . }}
+           port:
+            number: 9090
 ---
