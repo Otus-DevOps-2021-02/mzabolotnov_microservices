@@ -6,3 +6,4 @@ build_info.txt
 .env.save
 tls.crt
 tls.key
+*.sav*

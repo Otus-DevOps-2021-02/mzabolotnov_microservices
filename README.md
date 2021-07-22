@@ -1,7 +1,15 @@
 # mzabolotnov_microservices
 mzabolotnov microservices repository
 
-HW21 kubernetes-3
+HW kubernetes-4
+=========================================
+
+1. Установлен helm
+2. Созданы чарты для reddit app
+3. Установлен gitlab-omnibus из helm chart
+4. Настроен CI для компонентов reddit app и для деплоя приложения
+
+HW kubernetes-3
 =========================================
 
 1. Установлен Ingress Controller
