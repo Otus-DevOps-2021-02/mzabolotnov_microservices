@@ -1,6 +1,16 @@
 # mzabolotnov_microservices
 mzabolotnov microservices repository
 
+HW kubernetes-5
+=========================================
+
+1. Установлен prometheus через helm
+2. Развернуто приложение reddit
+3. Настроен сбор метрик приложения reddit
+4. Установлена grafana
+5. Добавлен dashboard мониторинга k8s
+
+
 HW kubernetes-4
 =========================================
 
